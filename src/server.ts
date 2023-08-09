@@ -21,4 +21,16 @@ app.use("/api", protect, router);
 app.post("/users", createUser);
 app.post("/login", loginUser);
 
+app.use((err, req, res) => {
+  if (err.type === "auth") {
+    res.status(401).json({ message: "Unauthorized" });
+  } else if (err.type === "input") {
+    res.status(400).json({ message: "Invalid Input" });
+  } else {
+    res
+      .status(500)
+      .json({ message: "Server Error - Something went wrong on our end" });
+  }
+});
+
 export default app;

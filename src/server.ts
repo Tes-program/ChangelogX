@@ -13,8 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  console.log("Hello World!");
-  res.json({ message: "Hello World!" });
+  res.json({ message: "hello" });
 });
 
 app.use("/api", protect, router);

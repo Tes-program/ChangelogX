@@ -6,5 +6,6 @@
         "lib": ["esnext"],
         "esModuleInterop": true,
         "declaration": true
-    }
+    },
+    "exclude": ["__tests__"]
 }

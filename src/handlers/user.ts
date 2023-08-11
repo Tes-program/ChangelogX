@@ -1,6 +1,8 @@
 import prisma from "../db";
 import { hashPassword, createJWT, comparePassword } from "../modules/auth";
 
+// Create a user and return a JWT and make it expire in 30 minutes
+
 export const createUser = async (req, res, next) => {
   try {
     const user = await prisma.user.create({

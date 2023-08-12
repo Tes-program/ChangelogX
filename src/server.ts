@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.send(
-    "Welcome to the API! Please refer to the documentation for usage instructions.",
+    "Welcome to the ChangelogX API! Please refer to the documentation for usage instructions.",
   );
 });
 

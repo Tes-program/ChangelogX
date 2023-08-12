@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.json({ message: "hello" });
+  res.send(
+    "Welcome to the API! Please refer to the documentation for usage instructions.",
+  );
 });
 
 app.use("/api", protect, router);

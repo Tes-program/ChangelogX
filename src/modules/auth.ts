@@ -16,6 +16,9 @@ export const createJWT = (user) => {
       username: user.username,
     },
     process.env.JWT_SECRET,
+    {
+      expiresIn: process.env.JWT_EXPIRES_IN,
+    },
   );
   return token;
 };

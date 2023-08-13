@@ -14,6 +14,7 @@ Install the dependencies:
 ```bash
 npm install
 ```
+
 ## Commands
 
 Running Locally:
@@ -39,4 +40,17 @@ Linting:
 
 ```bash
 npm run lint
+```
+
+## Project Structure
+
+```bash
+src\
+    | - config\ # Configuration files
+    | - handlers\ # Request handlers
+    | - modules\ # Authentication and Middleware
+    | - routes.ts\ # Routes
+    | - server.ts\ # Server
+    | - db.ts\ # Database connection
+    | - index.ts\ # Entry point
 ```
